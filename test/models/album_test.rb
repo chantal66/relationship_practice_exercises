@@ -9,11 +9,13 @@ class AlbumTest < ActiveSupport::TestCase
   end
 
   test "an album can call artist" do
+
     album = Album.new
     assert_respond_to album, :artist
   end
 
   test "an album can assign and recall an artist" do
+
     artist = Artist.create(name: "Prince")
     album  = artist.albums.create(title: "1999")
 
