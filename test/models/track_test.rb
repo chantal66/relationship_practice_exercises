@@ -11,13 +11,16 @@ class TrackTest < ActiveSupport::TestCase
   end
 
   test "a track is associated with a genre" do
+
     genre = Genre.create(name: "R&B")
     track = Track.create(name: "Big Poppa", genre: genre)
+
 
     assert_equal "R&B", track.genre.name
   end
 
   test "a track is on an album" do
+
     album = Album.create(title: "Ring Away")
     track = Track.create(name: "Roundabout", album: album)
 
